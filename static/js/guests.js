@@ -3,6 +3,8 @@
   if (!list) return;
   const add = document.getElementById('add-guest');
   const total = document.getElementById('id_guests-TOTAL_FORMS');
+  const partySize = document.getElementById('id_party_size');
+  const guestCount = document.getElementById('guest-count');
   const template = document.getElementById('guest-template');
   const status = document.getElementById('guest-status');
   const limit = Number(list.dataset.maxGuests);
@@ -17,8 +19,13 @@
           }
         });
       });
+      card.querySelectorAll('input').forEach(input => {
+        input.required = true;
+      });
     });
     total.value = cards.length;
+    partySize.value = cards.length + 1;
+    guestCount.value = partySize.value;
     add.disabled = cards.length >= limit;
     status.textContent = cards.length >= limit ? list.dataset.limitMessage : '';
   };
@@ -27,8 +34,6 @@
     const content = template.content.cloneNode(true);
     list.appendChild(content);
     update();
-    const partySize = document.getElementById('id_party_size');
-    if (partySize) partySize.value = list.children.length + 1;
     list.lastElementChild.querySelector('input').focus();
   });
   list.addEventListener('click', event => {
@@ -36,9 +41,11 @@
     if (!button) return;
     button.closest('.guest-card').remove();
     update();
-    const partySize = document.getElementById('id_party_size');
-    if (partySize) partySize.value = list.children.length + 1;
     add.focus();
   });
   update();
+  partySize.closest('[data-field="party_size"]').classList.add('has-derived-count');
+  list.classList.add('has-remove-controls');
+  document.getElementById('party-total').hidden = false;
+  add.hidden = false;
 })();

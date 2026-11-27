@@ -4,42 +4,48 @@
 {% block content %}
 <div class="page-grid wizard-grid">
   <aside class="invitation wizard-aside">
-    <span class="eyebrow"><span></span> {{ wedding.names }}</span>
     <h1>{% translate 'Samen naar' %}<br><em>{% translate 'een mooi feest.' %}</em></h1>
+    <p class="invitation-names">{{ wedding.names }}</p>
     <p class="intro">{% translate 'Een trouwfeest in Frankrijk, met onze liefste mensen. Vertel ons je plannen, dan maken we er samen iets moois van.' %}</p>
-    <nav class="wizard-nav" aria-label="{% translate 'Stappen van je aanmelding' %}"><ol>
-      {% for item in navigation %}<li{% if item.current %} class="current"{% endif %}>
-      {% if item.accessible %}<a href="{% url 'registration_step' step=item.slug %}"{% if item.current %} aria-current="step"{% endif %}><span>{{ item.number }}</span>{{ item.title }}</a>{% else %}<span class="nav-locked"><span>{{ item.number }}</span>{{ item.title }}</span>{% endif %}
-      </li>{% endfor %}
-    </ol></nav>
-    <p class="help">{% translate 'Je antwoorden blijven tijdens deze sessie bewaard nadat je op ‘Volgende’ klikt. Je aanmelding wordt pas bij de laatste stap verstuurd.' %}</p>
     <div class="event-details location-details">
       <div><span class="detail-label">{% translate 'WANNEER' %}</span><p>{% if wedding.date %}{{ wedding.date }}{% else %}{% translate 'Datum volgt op de uitnodiging' %}{% endif %}</p></div>
       <div><span class="detail-label">{% translate 'WAAR' %}</span><p class="location-line">{% if wedding.location %}{{ wedding.location }}{% else %}{% translate 'Locatie volgt op de uitnodiging' %}{% endif %}{% if wedding.address %}<a class="maps-link" href="https://www.google.com/maps/search/?api=1&amp;query={{ wedding.address|urlencode }}" target="_blank" rel="noopener noreferrer" aria-label="{% blocktranslate with address=wedding.address %}Bekijk {{ address }} op Google Maps (opent in een nieuw tabblad){% endblocktranslate %}" title="{% translate 'Bekijk het adres op Google Maps' %}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></a>{% endif %}</p></div>
     </div>
   </aside>
   <section class="rsvp-card wizard-card" id="aanmelden" aria-labelledby="step-title">
-    <span class="eyebrow">{% blocktranslate with number=step_number total=step_count %}STAP {{ number }} VAN {{ total }}{% endblocktranslate %}</span>
-    <h2 id="step-title">{{ title }}</h2><p class="card-intro">{{ description }}</p>
-    <form method="post" id="registration-form">
+    <h2 id="step-title">{{ title }}</h2>
+    <details class="wizard-progress">
+      <summary>{% blocktranslate with number=step_number total=step_count %}Stap {{ number }} van {{ total }}{% endblocktranslate %}</summary>
+      <nav class="wizard-nav" aria-label="{% translate 'Stappen van je aanmelding' %}"><ol>
+        {% for item in navigation %}<li>
+          {% if item.current %}<span aria-current="step">{{ item.title }}</span>
+          {% elif item.accessible %}<a href="{% url 'registration_step' step=item.slug %}">{{ item.title }}</a>
+          {% else %}<span>{{ item.title }}</span>{% endif %}
+        </li>{% endfor %}
+      </ol></nav>
+    </details>
+    <p class="card-intro">{{ description }}</p>
+    <form method="post" id="registration-form" data-leave-message="{% translate 'Je wijzigingen op deze stap zijn nog niet opgeslagen. Wil je de pagina verlaten?' %}">
       {% csrf_token %}
       {% if form.errors or primary.errors or guests.total_error_count %}<div class="error-summary" role="alert">{% translate 'Je antwoorden zijn nog niet opgeslagen. Controleer de velden hieronder.' %}</div>{% endif %}
       {{ form.non_field_errors }}
       <div class="question-list">{% include 'registrations/questions.html' %}</div>
       {% if primary %}
       <fieldset class="participant-section"><legend>{% translate 'Jouw gegevens' %}</legend><p class="help">{% translate 'Ook als je niet komt, weten we zo van wie het antwoord is.' %}</p><div class="fields-grid">{% include 'registrations/fields.html' with person=primary %}</div></fieldset>
-      <fieldset class="guest-section" id="attendance-guests"><legend>{% translate 'Welke personen uit je uitnodiging komen mee?' %}</legend><p class="help">{% translate 'Vul de namen en contactgegevens in van de personen die met je meekomen. Tel jezelf hierboven mee.' %}</p>
+      <fieldset class="guest-section" id="attendance-guests"><legend>{% translate 'Welke personen uit je uitnodiging komen mee?' %}</legend><p class="help">{% translate 'Vul de namen en contactgegevens in van de personen die met je meekomen.' %}</p>
         {{ guests.management_form }}
         {% for error in guests.non_form_errors %}<p class="field-error" role="alert">{{ error }}</p>{% endfor %}
         <div id="guest-list" data-max-guests="{{ guests.max_num }}" data-limit-message="{% translate 'Je hebt het maximum van 10 extra gasten bereikt.' %}">{% for guest in guests %}<div class="guest-card"><div class="guest-heading"><h3>{% translate 'Gast' %} <span class="guest-number">{{ forloop.counter }}</span></h3><button type="button" class="remove-guest">{% translate 'Verwijderen' %} ×</button></div><div class="fields-grid">{% include 'registrations/fields.html' with person=guest %}</div></div>{% endfor %}</div>
-        <button type="button" class="add-guest" id="add-guest">＋ {% translate 'Een gast toevoegen' %}</button><p id="guest-status" class="help" aria-live="polite"></p>
+        <button type="button" class="add-guest" id="add-guest" hidden>＋ {% translate 'Een gast toevoegen' %}</button>
+        <p class="party-total" id="party-total" hidden><label for="guest-count">{% translate 'Aantal personen (inclusief jezelf)' %}</label> <output id="guest-count"></output></p>
+        <p id="guest-status" class="help" aria-live="polite"></p>
         <noscript><p class="help">{% translate 'Kies het totale aantal personen en klik op ‘Gastenvelden tonen’ om zonder JavaScript gasten in te vullen.' %}</p><button type="submit" name="show_guests" value="1" formnovalidate>{% translate 'Gastenvelden tonen' %}</button></noscript>
       </fieldset>
       {% endif %}
       <div class="submit-area">
         {% if is_last %}<p class="privacy">{% translate 'Je gegevens gebruiken we voor de organisatie van ons trouwfeest. Praktische updates ontvang je alleen als je daarvoor toestemming geeft.' %}</p>{% endif %}
         <div class="wizard-actions">{% if previous %}<a class="back-link" href="{% url 'registration_step' step=previous %}">← {% translate 'Vorige' %}</a>{% endif %}<button class="submit-button" type="submit">{% if is_last %}{% translate 'Antwoord versturen' %}{% else %}{% translate 'Volgende' %}{% endif %}<span aria-hidden="true">→</span></button></div>
-        <p class="form-footnote">{% if is_last %}{% translate 'Je antwoorden worden nu definitief opgeslagen.' %}{% else %}{% translate 'Je kunt je antwoorden in eerdere stappen nog aanpassen.' %}{% endif %}</p>
+        <p class="form-footnote">{% if is_last %}{% translate 'Je antwoorden worden nu definitief opgeslagen.' %}{% else %}{% translate 'Met ‘Volgende’ bewaar je deze stap. Je verstuurt je antwoord pas op de laatste stap.' %}{% endif %}</p>
       </div>
     </form>
   </section>

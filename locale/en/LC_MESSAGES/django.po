@@ -16,6 +16,9 @@ msgstr "RSVPs & participants"
 msgid "Aanmeldnummer: %(reference)s"
 msgstr "RSVP reference: %(reference)s"
 
+msgid "Aantal personen (inclusief jezelf)"
+msgstr "Party size (including you)"
+
 msgid "Aanwezigheid"
 msgstr "Attendance"
 
@@ -151,6 +154,9 @@ msgstr "You have reached the maximum of 10 additional guests."
 msgid "Je kunt je antwoorden in eerdere stappen nog aanpassen."
 msgstr "You can still change your answers in previous steps."
 
+msgid "Je wijzigingen op deze stap zijn nog niet opgeslagen. Wil je de pagina verlaten?"
+msgstr "Your changes on this step haven’t been saved. Leave this page?"
+
 msgid "Jouw gegevens"
 msgstr "Your details"
 
@@ -174,6 +180,9 @@ msgstr "How many people will be attending?"
 
 msgid "Met liefde, voor onze liefste mensen."
 msgstr "With love, for our favourite people."
+
+msgid "Met ‘Volgende’ bewaar je deze stap. Je verstuurt je antwoord pas op de laatste stap."
+msgstr "Next saves this step. You’ll submit your RSVP on the final step."
 
 msgid "Mogen we je praktische updates sturen over het feest?"
 msgstr "May we send you practical updates about the celebration?"
@@ -210,6 +219,9 @@ msgstr "Together for"
 
 msgid "Samen op weg naar Frankrijk."
 msgstr "Making our way to France together."
+
+msgid "Stap %(number)s van %(total)s"
+msgstr "Step %(number)s of %(total)s"
 
 msgid "Stappen van je aanmelding"
 msgstr "RSVP steps"
@@ -255,6 +267,9 @@ msgstr "First and last name"
 
 msgid "Vorige"
 msgstr "Back"
+
+msgid "Vul de namen en contactgegevens in van de personen die met je meekomen."
+msgstr "Enter the names and contact details of the people joining you."
 
 msgid "Vul de namen en contactgegevens in van de personen die met je meekomen. Tel jezelf hierboven mee."
 msgstr "Enter the names and contact details of the people joining you. Include yourself in the total above."

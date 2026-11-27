@@ -38,7 +38,7 @@ class EnglishRegistrationTests(TestCase):
                      'Contact and communication', '10 July 2027', 'Clairey, France',
                      'View the address on Google Maps', 'Add a guest', 'Full name',
                      'Email address', 'Phone number', 'First and last name',
-                     'STEP 1 OF 5', 'Guest', 'Remove', 'Show guest fields',
+                     'Step 1 of 5', 'Guest', 'Remove', 'Show guest fields',
                      'You have reached the maximum of 10 additional guests.']:
             self.assertContains(response, text)
         self.assertContains(response, 'https://www.google.com/maps/search/?api=1')

@@ -9,7 +9,7 @@ if not SECRET_KEY:
     if not DEBUG:
         raise RuntimeError('Stel DJANGO_SECRET_KEY in voor productie.')
     SECRET_KEY = 'local-development-only-wedding-site'
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1,[::1]').split(',')
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1,[::1],192.168.0.140').split(',')
 INSTALLED_APPS = [
     'django.contrib.admin', 'django.contrib.auth', 'django.contrib.contenttypes',
     'django.contrib.sessions', 'django.contrib.messages', 'django.contrib.staticfiles',
