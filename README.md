@@ -77,6 +77,27 @@ SQLite bewaart alles lokaal in `db.sqlite3`. Dit bestand staat buiten versiebehe
 .\.venv\Scripts\python.exe manage.py test
 ```
 
-## Online zetten
+## Draaien met Gunicorn (Linux)
 
-Dit project is lokaal voorbereid en niet gepubliceerd. Django's `runserver` is bedoeld voor ontwikkeling. Voor productie zijn een geschikte Python-host, HTTPS, statische-bestandenconfiguratie en back-ups nodig. Zet `DJANGO_DEBUG=0`, stel een willekeurige `DJANGO_SECRET_KEY` in en configureer `DJANGO_ALLOWED_HOSTS`. Bij uitgeschakelde debug worden HTTPS en veilige cookies afgedwongen. Controleer de configuratie met `manage.py check --deploy` en verzamel statische bestanden met `manage.py collectstatic`.
+Gebruik op Windows WSL voor Gunicorn. De PowerShell-stappen hierboven blijven beschikbaar voor lokale ontwikkeling. Voer de volgende opdrachten uit vanuit de projectmap in een Linux-shell.
+
+```bash
+python3 -m venv ~/.venvs/trouwsite
+source ~/.venvs/trouwsite/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py collectstatic --noinput
+gunicorn --bind 127.0.0.1:8000 --workers 1 wedding.wsgi:application
+```
+
+Open http://127.0.0.1:8000/ voor een lokale proef. Gunicorn gebruikt één worker omdat de site SQLite gebruikt. Het proces moet de database en de bovenliggende map kunnen beschrijven. Maak een back-up van `db.sqlite3` vóór je een bestaande installatie migreert.
+
+### Productie achter HTTPS
+
+Stel vóór `migrate`, `collectstatic` en het starten van Gunicorn de productievariabelen in.
+
+- `DJANGO_DEBUG=0` activeert de HTTPS-omleiding en veilige cookies.
+- `DJANGO_SECRET_KEY` krijgt een willekeurig, blijvend geheim uit de configuratie van de host.
+- `DJANGO_ALLOWED_HOSTS` bevat de publieke hostnamen, gescheiden door komma’s en zonder schema of poort.
+
+Laat een reverse proxy op dezelfde host HTTPS afhandelen en naar `127.0.0.1:8000` doorsturen. Laat de proxy de publieke `Host` doorgeven, inkomende proxyheaders overschrijven en zelf `X-Forwarded-Proto: https` zetten voor HTTPS-verzoeken. Gunicorn geeft het schema van deze vertrouwde proxy door aan Django. Controleer de productie-instellingen met `python manage.py check --deploy`. WhiteNoise serveert de verzamelde CSS, JavaScript en adminbestanden. Voer `collectstatic` bij iedere release opnieuw uit.
