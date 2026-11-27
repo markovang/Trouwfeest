@@ -1,0 +1,8 @@
+{% for field in person %}
+<div class="field{% if field.name == 'name' %} full{% endif %}">
+  <label for="{{ field.id_for_label }}">{{ field.label }} <span aria-hidden="true">*</span></label>
+  {{ field }}
+  {% if field.errors %}<div id="{{ field.auto_id }}_error" role="alert">{% for error in field.errors %}<p class="field-error">{{ error }}</p>{% endfor %}</div>{% endif %}
+</div>
+{% endfor %}
+{{ person.non_field_errors }}

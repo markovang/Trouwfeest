@@ -1,0 +1,31 @@
+{% load static i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
+<!DOCTYPE html>
+<html lang="{{ CURRENT_LANGUAGE }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{% translate 'Samen maken we er een onvergetelijk trouwfeest van. Meld jezelf en je gasten aan.' %}">
+  <title>{% block title %}{% translate 'Kom je ook? · Ons trouwfeest' %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/wizard.css' %}">
+  <script src="{% static 'js/guests.js' %}" defer></script>
+  <script src="{% static 'js/wizard.js' %}" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="{% url 'register' %}"><span class="brand-mark" aria-hidden="true">♡</span> {% translate 'ons trouwfeest' %}<span class="brand-dot">.</span></a>
+    <span class="header-note">{% translate 'Een dag om samen te vieren' %}</span>
+    <div class="header-actions">
+      <nav class="language-switch" aria-label="{% translate 'Taal kiezen' %}">
+        {% include 'language_option.html' with language_code='nl' language_name='Nederlands' language_label='NL' %}
+        <span aria-hidden="true">/</span>
+        {% include 'language_option.html' with language_code='en' language_name='English' language_label='EN' %}
+      </nav>
+      <a class="header-link" href="{% url 'register' %}#aanmelden">{% translate 'Aanmelden' %} <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main>{% block content %}{% endblock %}</main>
+  <footer><span>{% translate 'Met liefde, voor onze liefste mensen.' %}</span><span>{% translate 'We kijken naar je uit' %} <span aria-hidden="true">♡</span></span></footer>
+</body>
+</html>

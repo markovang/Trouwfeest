@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% translate 'Bedankt voor je antwoord · Ons trouwfeest' %}{% endblock %}
+{% block content %}
+<section class="confirmation">
+  <span class="confirmation-icon" aria-hidden="true">♡</span><span class="eyebrow">{% translate 'BEDANKT VOOR JE ANTWOORD' %}</span>
+  {% if confirmation.attending %}
+    <h1>{% translate 'Wat fijn.' %}<br><em>{% translate 'Je bent erbij!' %}</em></h1>
+    <p>{% if confirmation.count == 1 %}{% translate 'Je aanmelding voor 1 persoon is opgeslagen. We kijken ernaar uit om samen met jou te vieren.' %}{% else %}{% blocktranslate with number=confirmation.count %}Je aanmelding voor {{ number }} personen is opgeslagen. We kijken ernaar uit om samen met jou te vieren.{% endblocktranslate %}{% endif %}</p>
+  {% else %}
+    <h1>{% translate 'Jammer dat je' %}<br><em>{% translate 'er niet bij bent.' %}</em></h1><p>{% translate 'Je afmelding is opgeslagen. Bedankt dat je het ons hebt laten weten.' %}</p>
+  {% endif %}
+  <p class="reference">{% blocktranslate with reference=confirmation.reference %}Aanmeldnummer: {{ reference }}{% endblocktranslate %}</p>
+  <a class="submit-button" href="{% url 'register' %}">{% translate 'Terug naar de uitnodiging' %} <span aria-hidden="true">↗</span></a>
+</section>
+{% endblock %}

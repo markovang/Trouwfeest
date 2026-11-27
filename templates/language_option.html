@@ -1,0 +1,9 @@
+{% load i18n %}
+{% language language_code %}
+<form id="language-option-{{ language_code }}" action="{% url 'set_language' %}" method="post">
+  {% csrf_token %}
+  <input type="hidden" name="language" value="{{ language_code }}">
+  <input type="hidden" name="next" value="{% if step %}{% url 'registration_step' step=step %}{% elif confirmation %}{% url 'confirmation' %}{% else %}{% url 'register' %}{% endif %}">
+  <button type="submit" lang="{{ language_code }}" aria-label="{{ language_name }}"{% if CURRENT_LANGUAGE == language_code %} aria-pressed="true"{% else %} aria-pressed="false"{% endif %}>{{ language_label }}</button>
+</form>
+{% endlanguage %}

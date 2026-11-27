@@ -1,0 +1,407 @@
+msgid ""
+msgstr "Project-Id-Version: wedding\nLanguage: en\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "10 juli 2027"
+msgstr "10 July 2027"
+
+msgid "6, Rue de l'ecole, Clairey, Frankrijk"
+msgstr "6, Rue de l'ecole, Clairey, France"
+
+msgid "Aanmelden"
+msgstr "RSVP"
+
+msgid "Aanmeldingen & deelnemers"
+msgstr "RSVPs & participants"
+
+msgid "Aanmeldnummer: %(reference)s"
+msgstr "RSVP reference: %(reference)s"
+
+msgid "Aanwezigheid"
+msgstr "Attendance"
+
+msgid "Anders"
+msgstr "Other"
+
+msgid "Antwoord versturen"
+msgstr "Submit RSVP"
+
+msgid "Auto"
+msgstr "Car"
+
+msgid "B&B"
+msgstr "B&B"
+
+msgid "BEDANKT VOOR JE ANTWOORD"
+msgstr "THANK YOU FOR YOUR REPLY"
+
+msgid "Bedankt voor je antwoord · Ons trouwfeest"
+msgstr "Thank you for your reply · Our wedding"
+
+msgid "Bekijk %(address)s op Google Maps (opent in een nieuw tabblad)"
+msgstr "View %(address)s on Google Maps (opens in a new tab)"
+
+msgid "Bekijk het adres op Google Maps"
+msgstr "View the address on Google Maps"
+
+msgid "Bijvoorbeeld: vrijdag 9 juli en zaterdag 10 juli"
+msgstr "For example: Friday 9 July and Saturday 10 July"
+
+msgid "Camping"
+msgstr "Campsite"
+
+msgid "Clairey, Frankrijk"
+msgstr "Clairey, France"
+
+msgid "Contact en communicatie"
+msgstr "Contact and communication"
+
+msgid "Datum volgt op de uitnodiging"
+msgstr "See your invitation for the date"
+
+msgid "Een dag om samen te vieren"
+msgstr "A day to celebrate together"
+
+msgid "Een fijne plek om te blijven na een mooi feest."
+msgstr "A lovely place to stay after a wonderful celebration."
+
+msgid "Een gast toevoegen"
+msgstr "Add a guest"
+
+msgid "Een trouwfeest in Frankrijk, met onze liefste mensen. Vertel ons je plannen, dan maken we er samen iets moois van."
+msgstr "A wedding celebration in France with our favourite people. Tell us your plans, and let's make it a wonderful occasion together."
+
+msgid "Eten en drinken"
+msgstr "Food and drink"
+
+msgid "Gast"
+msgstr "Guest"
+
+msgid "Gastenvelden tonen"
+msgstr "Show guest fields"
+
+msgid "Geen voorkeur"
+msgstr "No preference"
+
+msgid "Heb je een vrije plaats in je auto voor carpoolen?"
+msgstr "Do you have a spare seat in your car for carpooling?"
+
+msgid "Heb je hulp nodig bij het vinden van accommodatie?"
+msgstr "Do you need help finding accommodation?"
+
+msgid "Heb je vervoer nodig tussen accommodatie en feestlocatie?"
+msgstr "Do you need transport between your accommodation and the wedding venue?"
+
+msgid "Heb je vervoer nodig vanaf een station?"
+msgstr "Do you need transport from a train station?"
+
+msgid "Heb je voorkeur voor hotel, B&B, camping of vakantiehuis?"
+msgstr "Would you prefer a hotel, B&B, campsite or holiday home?"
+
+msgid "Het aantal personen moet overeenkomen met jezelf en de ingevulde gasten hieronder."
+msgstr "The number of people must match yourself and the guests entered below."
+
+msgid "Hoe kom je naar Frankrijk?"
+msgstr "How will you travel to France?"
+
+msgid "Hoe reis je anders naar Frankrijk?"
+msgstr "How else will you travel to France?"
+
+msgid "Hotel"
+msgstr "Hotel"
+
+msgid "In welke taal wil je informatie ontvangen?"
+msgstr "Which language would you like to receive information in?"
+
+msgid "Ja"
+msgstr "Yes"
+
+msgid "Ja, jullie mogen mij praktische updates sturen. Niet aanvinken betekent geen toestemming."
+msgstr "Yes, you may send me practical updates. Leave this box unticked if you do not give permission."
+
+msgid "Jammer dat je"
+msgstr "We're sorry"
+
+msgid "Je aanmelding voor %(number)s personen is opgeslagen. We kijken ernaar uit om samen met jou te vieren."
+msgstr "Your RSVP for %(number)s people has been saved. We look forward to celebrating with you."
+
+msgid "Je aanmelding voor 1 persoon is opgeslagen. We kijken ernaar uit om samen met jou te vieren."
+msgstr "Your RSVP for 1 person has been saved. We look forward to celebrating with you."
+
+msgid "Je afmelding is opgeslagen. Bedankt dat je het ons hebt laten weten."
+msgstr "Your reply that you can't attend has been saved. Thank you for letting us know."
+
+msgid "Je antwoorden blijven tijdens deze sessie bewaard nadat je op ‘Volgende’ klikt. Je aanmelding wordt pas bij de laatste stap verstuurd."
+msgstr "Your answers are saved during this session when you click ‘Next’. Your RSVP is only submitted at the final step."
+
+msgid "Je antwoorden worden nu definitief opgeslagen."
+msgstr "Your answers will now be submitted."
+
+msgid "Je antwoorden zijn nog niet opgeslagen. Controleer de velden hieronder."
+msgstr "Your answers have not been saved yet. Please check the fields below."
+
+msgid "Je bent erbij!"
+msgstr "You're joining us!"
+
+msgid "Je gegevens gebruiken we voor de organisatie van ons trouwfeest. Praktische updates ontvang je alleen als je daarvoor toestemming geeft."
+msgstr "We use your details to organise our wedding celebration. You will only receive practical updates if you give permission."
+
+msgid "Je hebt het maximum van 10 extra gasten bereikt."
+msgstr "You have reached the maximum of 10 additional guests."
+
+msgid "Je kunt je antwoorden in eerdere stappen nog aanpassen."
+msgstr "You can still change your answers in previous steps."
+
+msgid "Jouw gegevens"
+msgstr "Your details"
+
+msgid "Kies het totale aantal personen en klik op ‘Gastenvelden tonen’ om zonder JavaScript gasten in te vullen."
+msgstr "Choose the total number of people and click ‘Show guest fields’ to enter guests without JavaScript."
+
+msgid "Kom je naar het trouwfeest?"
+msgstr "Will you be attending the wedding celebration?"
+
+msgid "Kom je ook? · Ons trouwfeest"
+msgstr "Will you join us? · Our wedding"
+
+msgid "Laat weten of je erbij bent en wie er met je meekomt."
+msgstr "Let us know if you can attend and who will be joining you."
+
+msgid "Locatie volgt op de uitnodiging"
+msgstr "See your invitation for the location"
+
+msgid "Met hoeveel personen kom je?"
+msgstr "How many people will be attending?"
+
+msgid "Met liefde, voor onze liefste mensen."
+msgstr "With love, for our favourite people."
+
+msgid "Mogen we je praktische updates sturen over het feest?"
+msgstr "May we send you practical updates about the celebration?"
+
+msgid "Nederlands"
+msgstr "Dutch"
+
+msgid "Nee"
+msgstr "No"
+
+msgid "Ons trouwfeest"
+msgstr "Our wedding"
+
+msgid "Ook als je niet komt, weten we zo van wie het antwoord is."
+msgstr "These details help us identify your reply, even if you can't attend."
+
+msgid "Optioneel. Vermeld ook voor welke persoon dit geldt."
+msgstr "Optional. Please also tell us who this applies to."
+
+msgid "Overnachting"
+msgstr "Accommodation"
+
+msgid "Reis en vervoer"
+msgstr "Travel and transport"
+
+msgid "STAP %(number)s VAN %(total)s"
+msgstr "STEP %(number)s OF %(total)s"
+
+msgid "Samen maken we er een onvergetelijk trouwfeest van. Meld jezelf en je gasten aan."
+msgstr "Help us make our wedding celebration unforgettable. RSVP for yourself and your guests."
+
+msgid "Samen naar"
+msgstr "Together for"
+
+msgid "Samen op weg naar Frankrijk."
+msgstr "Making our way to France together."
+
+msgid "Stappen van je aanmelding"
+msgstr "RSVP steps"
+
+msgid "Taal kiezen"
+msgstr "Choose language"
+
+msgid "Tel jezelf mee. Vul 0 in als je niet komt."
+msgstr "Include yourself. Enter 0 if you can't attend."
+
+msgid "Terug naar de uitnodiging"
+msgstr "Back to the invitation"
+
+msgid "Trein"
+msgstr "Train"
+
+msgid "Trouwfeest beheer"
+msgstr "Wedding administration"
+
+msgid "Vakantiehuis"
+msgstr "Holiday home"
+
+msgid "Vertel ons hoe je naar Frankrijk reist."
+msgstr "Please tell us how you will travel to France."
+
+msgid "Vertel ons waar we rekening mee mogen houden."
+msgstr "Let us know about any requirements we should keep in mind."
+
+msgid "Verwijderen"
+msgstr "Remove"
+
+msgid "Vliegtuig"
+msgstr "Plane"
+
+msgid "Volgende"
+msgstr "Next"
+
+msgid "Voor hoeveel personen zoek je accommodatie?"
+msgstr "How many people need accommodation?"
+
+msgid "Voor- en achternaam"
+msgstr "First and last name"
+
+msgid "Vorige"
+msgstr "Back"
+
+msgid "Vul de namen en contactgegevens in van de personen die met je meekomen. Tel jezelf hierboven mee."
+msgstr "Enter the names and contact details of the people joining you. Include yourself in the total above."
+
+msgid "Vul dit in zodat we je kunnen helpen met accommodatie."
+msgstr "Please fill this in so we can help you find accommodation."
+
+msgid "Vul een aantal tussen 1 en 11 in."
+msgstr "Enter a number between 1 and 11."
+
+msgid "Vul een geldig telefoonnummer in, bijvoorbeeld +31 6 12345678."
+msgstr "Enter a valid phone number, for example +31 6 12345678."
+
+msgid "Vul een telefoonnummer met 7 tot 15 cijfers in."
+msgstr "Enter a phone number containing 7 to 15 digits."
+
+msgid "Vul minimaal 1 persoon in als je komt."
+msgstr "Enter at least 1 person if you are attending."
+
+msgid "WAAR"
+msgstr "WHERE"
+
+msgid "WANNEER"
+msgstr "WHEN"
+
+msgid "Wat fijn."
+msgstr "Wonderful."
+
+msgid "Wat is je e-mailadres?"
+msgstr "What is your email address?"
+
+msgid "We kijken naar je uit"
+msgstr "We can't wait to see you"
+
+msgid "Welke nachten wil je blijven?"
+msgstr "Which nights would you like to stay?"
+
+msgid "Welke personen uit je uitnodiging komen mee?"
+msgstr "Which people from your invitation will be joining you?"
+
+msgid "Wij gaan trouwen"
+msgstr "We're getting married"
+
+msgid "Wil je nog iets met ons delen?"
+msgstr "Is there anything else you'd like to tell us?"
+
+msgid "Zijn er allergieën waar we rekening mee moeten houden?"
+msgstr "Are there any allergies we should be aware of?"
+
+msgid "Zijn er dieetwensen?"
+msgstr "Do you have any dietary requirements?"
+
+msgid "Zo kunnen we je op de hoogte houden."
+msgstr "Here's how we can keep you informed."
+
+msgid "Zou je graag met iemand willen meerijden?"
+msgstr "Would you like to share a ride with someone?"
+
+msgid "aangemeld op"
+msgstr "registered on"
+
+msgid "aanmelding"
+msgstr "RSVP"
+
+msgid "aanmeldingen"
+msgstr "RSVPs"
+
+msgid "aantal aanwezige personen"
+msgstr "number of people attending"
+
+msgid "aanwezig"
+msgstr "attending"
+
+msgid "allergieën"
+msgstr "allergies"
+
+msgid "ander vervoermiddel"
+msgstr "other means of transport"
+
+msgid "deelnemer"
+msgstr "participant"
+
+msgid "deelnemers"
+msgstr "participants"
+
+msgid "dieetwensen"
+msgstr "dietary requirements"
+
+msgid "e-mailadres"
+msgstr "email address"
+
+msgid "e-mailadres voor communicatie"
+msgstr "contact email address"
+
+msgid "een mooi feest."
+msgstr "a beautiful celebration."
+
+msgid "er niet bij bent."
+msgstr "you can't join us."
+
+msgid "hoofdaanmelder"
+msgstr "lead guest"
+
+msgid "hulp bij accommodatie"
+msgstr "accommodation assistance"
+
+msgid "informatietaal"
+msgstr "information language"
+
+msgid "naam@voorbeeld.nl"
+msgstr "name@example.com"
+
+msgid "nachten voor accommodatie"
+msgstr "nights for accommodation"
+
+msgid "ons trouwfeest"
+msgstr "our wedding"
+
+msgid "opmerkingen"
+msgstr "notes"
+
+msgid "personen voor accommodatie"
+msgstr "people needing accommodation"
+
+msgid "reis naar Frankrijk"
+msgstr "travel to France"
+
+msgid "telefoonnummer"
+msgstr "phone number"
+
+msgid "toestemming voor praktische updates"
+msgstr "permission for practical updates"
+
+msgid "vervoer tussen accommodatie en feestlocatie"
+msgstr "transport between accommodation and venue"
+
+msgid "vervoer vanaf station nodig"
+msgstr "needs transport from a station"
+
+msgid "volledige naam"
+msgstr "full name"
+
+msgid "voorkeur accommodatie"
+msgstr "accommodation preference"
+
+msgid "vrije plaats voor carpoolen"
+msgstr "spare seat for carpooling"
+
+msgid "wil meerijden"
+msgstr "would like a ride"
